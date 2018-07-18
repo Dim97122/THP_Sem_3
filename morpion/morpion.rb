@@ -10,7 +10,7 @@ class Board < Array
   end
 
   def display_board
-    #Methode pour construire l'affichage du terrain de jeu avec des arrays "boards"qui relient à la commande (cf plus bas)
+  #Methode pour construire l'affichage du terrain de jeu avec des arrays "boards"qui relient à la commande (cf plus bas)
     puts "|------------------|"
     puts "|  #{@board[0]}   |  #{@board[1]}  |  #{@board[2]} "
     puts "|------------------|"
@@ -21,7 +21,7 @@ class Board < Array
   end
 
   def play(array)
-    #Methode pour définir les conditions de réception le terrain de jeu par rapport aux choix des joueurs
+  #Methode pour définir les conditions de réception le terrain de jeu par rapport aux choix des joueurs
     if @board[array[2]] == " "
       if array[1] == "X"
         @board[array[2]] << "X"
@@ -33,7 +33,7 @@ class Board < Array
     end
   end
 
-  def victory?
+  def victory? #méthode booléenne
   #Methode qui vérifie les combinaisons possibles de victoire
     case
       #premier combinaison : ligne 1-2-3
@@ -116,6 +116,7 @@ class Game
 
       @players = [@player1, @player2]
       #création d'un tableau qui couvre les deux joueurs
+
       @objet_tableau =    Board.new
   end
 
